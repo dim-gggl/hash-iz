@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,427;1,427&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "`Inter", sans-serif;
+    font-weight: 300;;
+    background: #f9eade;
+    /* background: linear-gradient(42deg,#8d5034 0%, #ff8944 100%); */
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #00000012;
+    padding-bottom: 0;
+
+}
+
+
+.app-container {
+    min-width: 550px;
+    max-width: 60%;
+    min-height: 30%;
+    max-height: 100%;
+    margin: auto;
+    padding: 5vh;
+    border-radius: 94px 95px 30px 35px;
+    border: 4px double rgba(241,241,241,0.83);
+    font-family: 'mononoki', 'Menlo', monospace;
+    box-shadow: 7px -11px 22px 8px rgba(0,0,0,0.75) inset,
+                -1px 1px 1px rgba(3, 7, 18, 0.13),
+                -3px 3px 3px rgba(3, 7, 18, 0.13),
+                -7px 7px 6px rgba(3, 7, 18, 0.13),
+                -13px 12px 10px rgba(3, 7, 18, 0.13),
+                -20px 19px 16px rgba(3, 7, 18, 0.13),
+                -29px 27px 23px rgba(3, 7, 18, 0.13),
+                -40px 37px 31px rgba(3, 7, 18, 0.13),
+                -52px 48px 40px rgba(3, 7, 18, 0.13),
+                -66px 61px 51px rgba(3, 7, 18, 0.13),
+                -81px 75px 63px rgba(3, 7, 18, 0.13);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background: linear-gradient(90deg, hsla(255, 100%, 11%, 1) 22%, hsla(254, 100%, 17%, 1) 51%, hsl(254, 98%, 24%) 74%, hsla(254, 99%, 29%, 1) 92%, hsla(254, 100%, 35%, 1) 100%);
+    overflow: scroll;
+    overscroll-behavior: contain;
+}
+
+.close-app-btn_container {
+    margin-bottom: 2rem;;
+    width: 90%;
+    height: 4.5rem;
+    margin: 0.4rem 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#clinkey {
+    margin: 0px auto;
+    padding-inline: 23px;
+    background-color: rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    color: rgb(177, 105, 1);
+    font-family: Telugu Sangam MN;
+    font-optical-sizing: auto;
+    font-weight: 1281;
+    letter-spacing: -5px;
+    font-style: normal;
+    font-size: 56px;
+    text-shadow: 1px -1px 2px #ffcd85, -1px 0px 3px #040200;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.08) rgba(0, 0, 0, 0.08) rgba(255, 255, 255, 0.22) rgba(255, 255, 255, 0.22);
+}
+
+.close-app-btn {
+    margin:0;
+    height: 35px;
+    width: 35px;
+    right: 0;
+    border: 1px solid #ffffffa4;
+    border-radius: 13px;
+    padding: auto;
+    text-align: center;
+    font-size: 24px;
+    font-style: bold;
+    cursor: pointer;
+    background: color(srgb 0.1337 0 0.57 / 0.62);
+    box-shadow: -1px 2px 5px 1px rgba(255, 255, 255, 0.31) inset, inset 1px 1px 1px 1px #000;
+    text-shadow: 1px 0px 2px rgba(255, 255, 255, 0.65), -1px 0px 2px #000;
+    transition: scale ease-in 0.3s;
+}
+
+.close-app-btn:hover {
+    scale: 1.03;
+    text-shadow: 1px -1px 1px #000000, -1px 0px 1px #ffffff;
+}
+
+fieldset.how-long {
+    margin-top: 2rem;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    color: #ffffffa4;
+    border-radius: 45px;
+    border: 1px solid rgba(255, 255, 255, 0.461);
+    min-width: 70%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+input::-webkit-textfield-decoration-container {
+    display: flex;
+    align-items: center;
+    content: none;
+    writing-mode: inherit;
+}
+
+.num-char {
+    font-family: "Freckle Face", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #e3e2e2;
+    font-size: 30px;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 0;
+    text-shadow: 1px -1px 1px #565656, -1px 1px 1px #ffffff;
+}
+
+legend {
+    color: #ff9a01;
+    font-style: bold;
+    font-family: "Square Peg", cursive;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    font-size: 32px;
+}
+
+div.radio-container {
+    padding: 0;
+    margin-inline: auto;
+}
+
+.notice {
+    margin: 1rem 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-align: justify;
+    color: #ffffffb8;
+}
+
+.special-b {
+    color: #FF0054;
+}
+
+.normal-b {
+    color: #c9ff65;
+}
+
+
+label {
+    margin-left: 2rem;
+    font-size: 13px;
+}
+
+label:nth-child(1) {
+    flex-grow: 1;
+}
+
+label:nth-child(2) {
+    flex-grow: 1;
+}
+
+.radio {
+    background-color: #00000000;
+    width: fit-content;
+}
+
+
+input {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 50%;
+    font-size: 28px;
+    font-family: "Chelsea Market", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 20px;
+    text-align: center;
+    border-top: 2px solid #0e013a85;
+    border-right: 2px solid #0e013a85;
+    border-left:2px solid #522ad56e;
+    border-bottom: 2px solid #522ad56e;
+    box-shadow: inset -2px 5px 8px 3px #000000;
+}
+
+button {
+    font-family: "VT323", "ST Mono", "Fira Code", monospace;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+    font-size: 20px;
+    margin-top: 10px;
+    width: 208px;
+    height: 47px;
+    cursor: pointer;
+    background: #ff9900;
+    color: #e78b00;
+    text-shadow: 1px -1px 1px #653d01, -1px 0px 1px #ffcc7f;
+    border: 2px solid #2f2d2e;
+    border-radius: 20px;
+    box-shadow: 3px -3px 4px 2px rgba(0,0,0,0.75) inset, -3px 3px 6px 1px #f6c377 inset;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    box-shadow: -6px 6px 11px -4px rgba(0,0,0,0.73) inset, 7px -6px 11px 3px rgba(0,0,0,0.55) inset;
+}
+
+#password {
+    display: none;
+    margin: 1.5rem auto;
+    text-align: center;
+    word-break: break-all;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.337);
+    border-radius: 15px;
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #eb8d00;
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin: auto auto 0 auto;
+    max-height: 10%;
+    width: 100%;
+    padding: 0;
+}
+
+.footer {
+    bottom: 0;
+    right: 0;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    text-align: right;
+    font-size: 12px;
+    color: #3f150a;
+    width: 8vh;
+}
+
+@media screen and (max-width: 768px) {
+
+    * {
+        padding: 0;
+        font-size: 12px;
+    }
+
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        justify-content: space-around;
+    }
+
+    .app-container {
+        margin: 0;
+        padding: 5px;
+        max-width: 90%;
+        height: 100%;
+
+    }
+
+    #clinkey {
+        padding: 3px;
+        border-radius: 10px;
+        font-size: 2.5rem;
+    }
+
+    fieldset {
+        margin: 0;
+        padding: 0.4rem;
+        border-radius: 14px;
+        width: 80%;
+    }
+
+    .num-char {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .notice {
+        margin: 0;
+        text-align: justify;
+    }
+
+    label {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    input {
+        padding: 7px;
+        margin-bottom: 3px;
+        font-size: 1.6rem;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+
+    * {
+        font-size: 11px;
+    }
+
+
+}

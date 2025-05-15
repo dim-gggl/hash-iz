@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="welcome">Welcome to Hash•iz !</h1>
+<p>Hash•iz is a safe password manager, that works offline.
+    It stores your encrypted credentials locally and offers access to
+    <a href="{{ url_for('clinkey') }}" class="clinkey-link">ClinKey</a>, a strong password generator.
+</p>
+<p>To start, <a href="{{ url_for('register') }}">create an account</a> or
+        <a href="{{ url_for('login') }}">log in</a>.</p>
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hash•iz</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <!-- Barre de navigation simple -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <span class="logo">Hash•iz</span>
+    </div>
+    <div class="nav-right">
+      {% if session.get('user_id') %}
+      <!-- Si utilisateur connecté, on montre lien Dashboard et Déconnexion -->
+      <a href="{{ url_for('dashboard') }}">Dashboard</a>
+      <a href="{{ url_for('logout') }}">Log out</a>
+      {% else %}
+      <!-- Si non connecté, on propose Inscription/Connexion -->
+      <a href="{{ url_for('register') }}">Sign up</a>
+      <a href="{{ url_for('login') }}">Sign in</a>
+      {% endif %}
+    </div>
+  </nav>
+
+  <!-- Contenu principal des pages -->
+  <main class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="flash-messages">
+      {% for category, msg in messages %}
+      <div class="flash {{ category }}">{{ msg }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Inclus le script JS principal -->
+  <script src="{{ url_for('static', filename='clinkey.js') }}"></script>
+</body>
+
+</html>

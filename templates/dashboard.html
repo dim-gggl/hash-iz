@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="dashboard-title">{{ user.username }}'s hash•IZ Vault</h2>
+
+<!-- Section: Formulaire d'ajout d'un nouveau mot de passe -->
+<div class="form-section">
+  <h3>Save a password</h3>
+  <form method="post" action="{{ url_for('dashboard') }}" class="form-card">
+    <label for="site">Site/Service :</label>
+    <input type="text" name="site" id="site" placeholder="Site or service name" required>
+
+    <label for="login">Id/Email :</label>
+    <input type="text" name="login" id="login" placeholder="Username or mail" required>
+
+    <label for="password">Password :</label>
+    <div class="password-input-group">
+      <input type="password" name="password" id="new-password" placeholder="Your password" required>
+    </div>
+
+    <button type="submit">Save</button>
+  </form>
+  <p class="note tips">Tips : Use  <a href="{{ url_for('clinkey') }}" class="clinkey-link"> ClinKey</a>  to generate a strong password.</p>
+</div>
+
+<!-- Section: Liste des mots de passe enregistrés -->
+<div class="list-section">
+  <h3>Your saved passwords</h3>
+  {% if passwords %}
+  <table class="password-table">
+    <thead>
+      <tr>
+        <th>Site/Service</th>
+        <th>Id</th>
+        <th>Password</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for entry in passwords %}
+      <tr>
+        <td>{{ entry.site }}</td>
+        <td>{{ entry.login }}</td>
+        <td>
+          <input type="password" value="{{ entry.password }}" readonly class="pwd-field">
+        </td>
+        <td>
+          <button type="button" class="reveal-btn">Show</button>
+          <button type="button" class="copy-btn" data-password="{{ entry.password }}">Copy</button>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+    {% else %}
+    <p>No saved passwords yet.</p>
+    {% endif %}
+</div>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+      const copyBtns = document.querySelectorAll(".copy-btn");
+      copyBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const password = btn.getAttribute("data-password");
+          navigator.clipboard.writeText(password).then(() => {
+            const originalText = btn.textContent;
+            btn.textContent = "Copied!";
+            setTimeout(() => {
+              btn.textContent = originalText;
+            }, 1000);
+          }).catch(err => {
+            console.error("Error while copying :", err);
+          });
+        });
+      });
+    });
+</script>
+{% endblock %}

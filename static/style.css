@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
+
+/* Base styling */
+body {
+    font-family: Sathu;
+    font-weight: regular;
+    margin: 0;
+    font-size: 16px;
+    font-weight: inherit;
+    padding: 0px;
+    background-color: #fff0f0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.clinkey-link{
+    font-family: "Chicle", serif;
+    text-decoration: none;
+    font-size: 2rem;;
+    transition: scale 0.3s ease;
+    margin-top: 1.5rem;
+    margin-inline: 1rem;
+    color: #EB5E28;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+.clinkey-link:hover{
+    scale: 1.1;
+}
+
+/* Navigation bar */
+.navbar {
+    background: linear-gradient(90deg, hsla(255, 100%, 11%, 1) 22%, hsla(254, 100%, 17%, 1) 51%, hsla(254, 98%, 24%, 1) 74%, hsla(254, 99%, 29%, 1) 92%, hsla(254, 100%, 35%, 1) 100%);
+    color: #fff0f0;
+    padding: 36px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 0 15px;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 3.2em;
+}
+
+.navbar a {
+    color: #fff0f0;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+h1.welcome {
+    font-family: Avenir Next Condensed;
+    font-weight: regular;
+    font-size: 3.3rem;
+    margin-top: 4rem;
+    color: rgba(41, 22, 47, 0.92);
+}
+
+/* Flash messages */
+.flash-messages {
+    margin-bottom: 15px;
+}
+
+.flash {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    color: #fff0f0;
+}
+
+/* green */
+.flash.success {
+    background-color: #028090;
+}
+
+/* fade pink */
+.flash.info {
+    background-color: #A07178;
+}
+
+/* bleu */
+.flash.warning {
+    background-color: #FF7700;
+}
+
+/* red */
+.flash.danger {
+    background-color: #A30000;
+}
+
+/* rouge */
+.flash.warning,
+.flash.danger {
+    color: #fff0f0;
+}
+
+/* Form cards */
+.form-card {
+    background: #fff0f0;
+    border: 1px solid #42424296;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.form-card label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.form-card input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-card button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff0f0;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-card button[type="submit"]:hover {
+    background-color: #555;
+    cursor: pointer;
+}
+
+/* Specific elements */
+
+.dashboard-title {
+    text-align: center;
+    font-family: "Fraunces", serif;
+    font-size: 2.2rem;
+}
+
+.password-input-group {
+    display: flex;
+    align-items: center;
+}
+
+.password-input-group input {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.password-input-group button#generate-btn:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+/* Password table */
+.password-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff0f0;
+    border: 1px solid #ddd;
+}
+
+.password-table th,
+.password-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.password-table th {
+    background: #fff0f0;
+}
+
+.password-table .pwd-field {
+    border: none;
+    background: transparent;
+    font-size: 1em;
+    /* width set by value length typically */
+}
+
+.tips {
+    background-color: #90909028;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.password-table .reveal-btn {
+    padding: 5px 8px;
+    font-size: 0.9em;
+    border: none;
+    background-color: #028090;
+    color: #fff0f0;
+    border-radius: 10px;
+    transition : scale 0.3s ease;
+}
+
+.password-table .reveal-btn:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+/* Sections */
+.form-section,
+.list-section {
+    margin-bottom: 40px;
+}
+
+.form-section h3,
+.list-section h3 {
+    margin-bottom: 10px;
+}
+
+.note {
+    font-size: 1.2rem;
+    color: #0c002b;
+}

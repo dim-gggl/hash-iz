@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='clinkey.css')}}"> -->
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+      </style>
+      <link rel="stylesheet" type="text/css" href="../static/clinkey.css">
+      <title>ClinKey</title>
+  </head>
+  <body>
+  	<section class="app-container">
+      <div class="close-app-btn_container">
+        <h1 id="clinkey">ClinKey</h1>
+        <button class="close-app-btn" onclick="homePage()"> X </button>
+      </div>
+        <fieldset class="how-long">
+          <legend>  How long ?  </legend>
+          <p class="notice">Enter the length of your ClinKey password</p>
+          <input type="number" id="num_char" value="16" min="1" />
+        </fieldset>
+
+        <fieldset class="how-twisted">
+          <legend>  How twisted ?  </legend>
+          <p class="notice">With or without special chars</p>
+          <div class="radio-container">
+            <input class="radio" type="radio" id="special" name="special-characters" value="special-character" checked />
+            <label for="special">Nasty like <b class="special-b"> ^+*&%#÷ </b> ?</label>
+          </div>
+          <div class="radio-container">
+            <input class="radio" type="radio" id="simple" name="special-characters" value="no-special-characters" />
+            <label for="simple">Or more like <b class="normal-b">AbXz0178</b> ?</label>
+          </div>
+        </fieldset>
+
+      <button class="button" onclick="generatePassword()">LET ME SEE IT !</button>
+      <div class="password" id="password"></div>
+  	</section>
+    <footer>
+      <p class="footer">© 2025 ClinKey, Hash•iz</p>
+    </footer>
+
+    <script>
+    async function generatePassword() {
+        const num_char = document.getElementById('num_char').value;
+        const special = document.getElementById('special').checked;
+        const response = await fetch(`/show_me?num_char=${num_char}&special=${special}`);
+        const data = await response.json();
+        const finalPassword = document.getElementById('password');
+        finalPassword.style.display = "block";
+        finalPassword.textContent = data.password;
+    }
+
+    async function homePage() {
+      const response = await fetch("/");
+      window.location.href = "/"
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const passwordDiv = document.getElementById("password");
+
+        passwordDiv.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(passwordDiv.textContent);
+            // Optionnel : feedback visuel temporaire
+            const original = passwordDiv.textContent;
+            passwordDiv.textContent = "Copié !";
+            setTimeout(() => {
+              passwordDiv.textContent = original;
+            }, 1000);
+          } catch (err) {
+            console.error("Erreur de copie :", err);
+          }
+        });
+      });
+    </script>
+
+  </body>
+</html>
